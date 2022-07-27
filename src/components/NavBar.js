@@ -15,6 +15,8 @@ function NavBarMenu(){
             <Nav.Link href="#VentaFiltros">Filtros</Nav.Link>
             <Nav.Link href="#VentaMicrofono">Micrófonos</Nav.Link>
           </Nav>
+
+          <CartWidgets></CartWidgets>
         </Container>
       </Navbar>
       </>
