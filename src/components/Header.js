@@ -8,6 +8,7 @@ function Header () {
     ) 
 }
 
+export default Header    //xq no se ve el h1?
 
 /*const Header= () =>
 return (

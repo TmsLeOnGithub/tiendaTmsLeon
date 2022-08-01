@@ -1,12 +1,12 @@
 
-function CartWidgets (){
+function CartWidgets() {
     return (
         <>
-        <span class="material-symbols-outlined">
-shopping_cart
-</span>
+            <span class="material-symbols-outlined">
+                shopping_cart
+            </span>
         </>
-    ) 
+    )
 
 }
 
