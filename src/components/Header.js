@@ -8,20 +8,4 @@ function Header () {
     ) 
 }
 
-export default Header    //xq no se ve el h1?
-
-/*const Header= () =>
-return (
-<header id="header">
-    <h1 className="Titulo"> TITULO</h1>
-    {<img src="/logo192.png"/>}
-    <span class="material-symbols-outlined">
-shopping_cart_checkout
-</span>
-    <nav 
-    type="header">
-        </nav>
-        </header>
-    )
-
-    export default Header*/
+export default Header   
