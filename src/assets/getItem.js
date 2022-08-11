@@ -1,6 +1,6 @@
-export const getItem = (item)=> {
+export const getItem = (items, idItem)=> {
     return new Promise ((resolve,reject) =>{
         setTimeout (()=> {
-            resolve(item)
+            resolve(items.find((item) => item.id === idItem) )
         },2000)
     })};

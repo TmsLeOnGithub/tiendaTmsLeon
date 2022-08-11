@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import CartWidgets from './CartWidgets';
-import {Link} from  "react-router-dom";
+import {NavLink} from  "react-router-dom";
 
 
 function NavBarMenu(){
@@ -10,14 +10,12 @@ function NavBarMenu(){
         <>
       <Navbar bg="primary" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">ProduccionesTMS</Navbar.Brand>
+          <Navbar.Brand href="/">ProduccionesTMS</Navbar.Brand>
           <Nav className="me-auto">
-         
-            <Link to="/ventaLentes">Lentes</Link>
-            <Link to="/VentaFiltros">Filtros</Link>
-            <Link to="/VentaMicrofono">Micrófonos</Link>
+            <NavLink to="/categoria/1">Lentes</NavLink>
+            <NavLink to="/categoria/2">Filtros</NavLink>
+            <NavLink to="/categoria/3">Micrófonos</NavLink>
           </Nav>
-
           <CartWidgets></CartWidgets>
         </Container>
       </Navbar>

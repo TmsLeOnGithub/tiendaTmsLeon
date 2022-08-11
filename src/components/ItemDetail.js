@@ -15,7 +15,7 @@ function ItemDetail({ producto }) {
             <p>{descripcion}</p>
         </Col>
         <Col> 
-        <img width={400} src={image}></img>
+        <img width={300} src={image}></img>
         </Col>
         </Row>
 

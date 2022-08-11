@@ -1,13 +1,19 @@
 export const productos = [
-    { "id": "lente1", "nombre": "Lente 50mm Nikon", 
-    descripcion: `
+    {
+        "id": 1,
+        "nombre": "Lente 50mm Nikon",
+        descripcion: `
     Lente gran angular para cámara Nikon con apertura F/1.8
     - Enfoque: Manual (MF) o Automático (AF)
     - Campo de visión: 46 grados (31.7 grados para APS-C / DX)
      - Construcción: 5 grupos / 6 elementos`,
-      "precio": 41600, "categoria": 'lente', "stock": 5, "image": "https://m.media-amazon.com/images/I/61eSjrMfPSL._AC_SL1200_.jpg " },
-    
-      { "id": "lente2", "nombre": "Lente 18-55mm Nikon",
+        "precio": 41600, categoria: 1,
+        "stock": 5,
+        "image": "https://m.media-amazon.com/images/I/61eSjrMfPSL._AC_SL1200_.jpg "
+    },
+    {
+        "id": 2,
+        "nombre": "Lente 18-55mm Nikon",
         descripcion: `Tipo de montura. Nikon F-Bayoneta.
         Escala de distancia focal. 18 - 55mm.
         Relación del zoom. 3.1x.
@@ -16,24 +22,36 @@ export const productos = [
       Lente gran angular para cámara Nikon con apertura F/1.8
       - Enfoque: Manual (MF) o Automático (AF)
       - Campo de visión: 46 grados (31.7 grados para APS-C / DX)
-       - Construcción: 5 grupos / 6 elementos`,  
-       "precio": 15400, "categoria": 'lente', "stock": 5, "image": "https://m.media-amazon.com/images/I/61eSjrMfPSL._AC_SL1200_.jpg " },
-    
-    
-       { "id": "lente3", "nombre": "Lente 35mm Nikon",
-       descripcion: `
+       - Construcción: 5 grupos / 6 elementos`,
+        "precio": 15400, categoria: 1,
+        "stock": 5,
+        "image": "https://m.media-amazon.com/images/I/61eSjrMfPSL._AC_SL1200_.jpg "
+    },
+    {
+        "id": 3,
+        "nombre": "Lente 35mm Nikon",
+        descripcion: `
        Apertura máxima. f/ 1.8.
         Apertura mínima. f/ 16.
         Formato. FX/35 mm.
         Ángulo de visión máximo (formato DX) 44°`,
-        "precio": 41115, "categoria": 'lente', "stock": 5, "image": "https://m.media-amazon.com/images/I/61eSjrMfPSL._AC_SL1200_.jpg " },
-    
-    
-       { "id": "lente4", "nombre": "Teleob. 500/1000mm ", 
-       descripcion: `para cámaras sin espejo con montura E de Sony de formato de fotograma completo`, 
-       "precio":18750, "categoria": 'lente', "stock": 5, "image": "https://m.media-amazon.com/images/I/61eSjrMfPSL._AC_SL1200_.jpg " },
-    { "id": "lente5", "nombre": "Lente 18-55mm Nikon", "precio": 15400, "categoria": 'lente', "stock": 5, "image": "https://m.media-amazon.com/images/I/61eSjrMfPSL._AC_SL1200_.jpg " }
-
+        "precio": 41115, categoria: 1,
+        "stock": 5,
+        "image": "https://m.media-amazon.com/images/I/61eSjrMfPSL._AC_SL1200_.jpg "
+    },
+    {
+        "id": 4,
+        "nombre": "Teleob. 500/1000mm ",
+        descripcion: `para cámaras sin espejo con montura E de Sony de formato de fotograma completo`,
+        "precio": 18750, categoria: 1,
+        "stock": 5,
+        "image": "https://m.media-amazon.com/images/I/61eSjrMfPSL._AC_SL1200_.jpg "
+    },
+    {
+        "id": 5,
+        "nombre": "Lente 18-55mm Nikon",
+        "precio": 15400, categoria: 2,
+        "stock": 5,
+        "image": "https://m.media-amazon.com/images/I/61eSjrMfPSL._AC_SL1200_.jpg "
+    }
 ]
-
-

@@ -1,28 +1,28 @@
 import ItemList from './ItemList';
 import { useState, useEffect } from "react"
 
+import {useParams } from 'react-router-dom';
+
 import { customFetch } from "../assets/customFetch";
 
 import { productos } from "../assets/productos.js";
-import ItemDetailContainer from './ItemDetailContainer';
 
 function ItemListContainer() {
-  const [listProductos, setListProductos] = useState([])
+  const [listProductos, setListProductos] = useState([]) 
+  const {idCategoria} = useParams()
 
+  
   useEffect(() => {
-    customFetch(productos)
+    customFetch(productos, +idCategoria)
       .then(data => setListProductos(data)
       )
-  }, [])
+  }, [idCategoria])
 
 
   return (<>
     <div className="p-2">
       <ItemList productos={listProductos}></ItemList>
     </div>
-
-
-   <ItemDetailContainer></ItemDetailContainer>
   </>
   )
 }
