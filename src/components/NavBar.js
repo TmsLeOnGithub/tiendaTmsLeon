@@ -15,8 +15,9 @@ function NavBarMenu(){
             <NavLink to="/categoria/1">Lentes</NavLink>
             <NavLink to="/categoria/2">Filtros</NavLink>
             <NavLink to="/categoria/3">Micrófonos</NavLink>
+        
           </Nav>
-          <CartWidgets></CartWidgets>
+          <CartWidgets  href="https://www.whatsapp.com/?lang=es%E2%80%9D_blank%3EWHATSAPP"></CartWidgets>
         </Container>
       </Navbar>
       </>

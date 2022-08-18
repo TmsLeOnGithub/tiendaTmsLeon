@@ -3,6 +3,7 @@ import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetailContainer';
+import Cart from './components/Cart';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
 
           <Route exact path='/itemDetail/:idItem' element={<ItemDetailContainer />}>
+          </Route>
+
+          <Route exact path='/cart' element={<Cart/>}>
           </Route>
 
           

@@ -36,7 +36,7 @@ export default function ItemCount({ stock = 0, initial = 1, onAdd }) {
                 <Button className="w-25" variant="secondary" onClick={quitar}>-</Button>
               </div>
                 
-                <Button className="mt-3" variant="primary" disabled={counter>stock} onClick={() => onAdd(counter)
+                <Button className="mt-3" variant="primary" disabled={counter>stock || !counter} onClick={() => onAdd(counter)
                 }>Agregar al carrito</Button>
             </div>
         </>

@@ -1,6 +1,5 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import ItemCount from './ItemCount';
 import {Link} from 'react-router-dom'
 
 function Item({ producto }) {
@@ -18,9 +17,6 @@ function Item({ producto }) {
         <ListGroup className="list-group-flush">
           <ListGroup.Item>${precio}</ListGroup.Item>
         </ListGroup>
-        <Card.Body>
-          <ItemCount initial={0} stock={stock} onAdd={(cantidad) => onAdd(cantidad)}></ItemCount>
-        </Card.Body>
       </Card>
     </div>
 

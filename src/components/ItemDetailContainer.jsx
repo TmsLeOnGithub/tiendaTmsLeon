@@ -5,7 +5,7 @@ import { productos } from "../assets/productos.js";
 import {useParams } from 'react-router-dom';
 
 const ItemDetailContainer = (  ) => {
-    const [producto, setProducto] = useState([])
+    const [producto, setProducto] = useState({})
     const {idItem} = useParams()
    
     useEffect(() => {
