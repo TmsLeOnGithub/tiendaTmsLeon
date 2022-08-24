@@ -1,18 +1,62 @@
-import { Children, createContext, useEffect } from "react";
-import (createContext)
+import { createContext, useState } from "react";
+import {productos} from "../assets/productos";
 
-export const {provider} = createContext
+export const CartContext = createContext();
 
-const {provider}= CartContext
+const { Provider } = CartContext;
 
-const myProvider = ({Children}) =>{
-    const [cart,setCart] = useEffect ([])
+const CustomProvider = (props) => {
 
-    const isInCart =  (id) => {
-     return cart.some (x => x.id === id)
+const [cart,setCart]=useState([])
+
+   const isInCart=(id)=>{
+    return cart.some(producto => producto.id===id)
+   }
+
+   const agregarProducto = (producto) => {
+
+    if(isInCart(producto.id)){
+        const productoEncontrado = cart.find(p => p.id === producto.id);
+        const index = cart.indexOf(productoEncontrado);
+        const newArray = [...cart];
+        newArray[index].cantidad += producto.cantidad;
+        setCart(newArray);
+    }else {
+        setCart([...cart, producto])
+    }
+   }
+
+   const eliminarProducto = (id) =>{
+    return setCart (cart.filter (productos => productos.id !==id))
+   }
+   
+   const vaciarCarrito=() =>{
+    return setCart ([])
+   }
+
+   const cantidadCarrito=()=>{
+    return cart.reduce ((acc,producto) => acc += producto.cantidad,0)
+   }
+
+   const obtenerPRecio =()=>{}
+
+    
+    const valorDelContexto = {
+        cantidadCarrito,
+        cart,
+        agregarProducto,
+        eliminarProducto,
+        vaciarCarrito,
     }
 
-    const addItem = () => {}
+    return (
+        <Provider value={valorDelContexto}> 
+        {props.children}
+        </Provider>
+    )
+
+   // return <Provider value= {{cart,isIncart,vaciarCarrito,eliminarProducto,cantidadCarrito,obtenerPRecio}}>{children}</Provider>
 }
 
-export default myProvider
+export default CustomProvider
+

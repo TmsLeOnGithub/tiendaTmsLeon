@@ -4,7 +4,9 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom'
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import {CartContext}   from "../context/CartContext"
+
 
 import ItemCount from './ItemCount';
 
@@ -12,8 +14,12 @@ function ItemDetail({ producto }) {
     const { id, image, nombre, descripcion, stock } = producto;
     const [cantidad, setCantidad] = useState(0);
 
+    const {agregarProducto } = useContext(CartContext)
+
     const onAdd = (contador) => {
         setCantidad(contador);
+        producto.cantidad = contador;
+        agregarProducto(producto);
     }
 
     return <Container>
