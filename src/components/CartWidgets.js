@@ -5,8 +5,9 @@ import {CartContext}   from "../context/CartContext"
 
 function CartWidgets() {
    
-   const {cantidadCarrito} = useContext(CartContext)
-   
+   const {cantidadCarrito,cart} = useContext(CartContext)
+
+    if (cart.length > 0)
     return (
         <>
             <NavLink to="/cart">

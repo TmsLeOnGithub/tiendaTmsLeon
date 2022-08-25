@@ -38,7 +38,9 @@ const [cart,setCart]=useState([])
     return cart.reduce ((acc,producto) => acc += producto.cantidad,0)
    }
 
-   const obtenerPRecio =()=>{}
+   const calcularTotal =()=>{
+    return cart.reduce ((acc,producto) => acc += producto.cantidad * producto.precio,0)
+   }
 
     
     const valorDelContexto = {
@@ -47,6 +49,7 @@ const [cart,setCart]=useState([])
         agregarProducto,
         eliminarProducto,
         vaciarCarrito,
+        calcularTotal
     }
 
     return (
