@@ -22,6 +22,7 @@ const Cart = () => {
 
                         </Card.Text>
                         <Button variant="danger" onClick={() => eliminarProducto(producto.id)}>Eliminar Producto </Button>
+                        <Button variant="primary" size="lg">Terminar compra</Button>
                     </Card.Body>
                 </Card>
                 
