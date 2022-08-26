@@ -1,11 +1,9 @@
 import ItemList from './ItemList';
 import { useState, useEffect } from "react"
+import { collection,getDocs, query, where } from "firebase/firestore"
 
 import {useParams } from 'react-router-dom';
-
-import { customFetch } from "../assets/customFetch";
-
-import { productos } from "../assets/productos.js";
+import {db} from '../assets/firebase.js';
 
 function ItemListContainer() {
   const [listProductos, setListProductos] = useState([]) 
@@ -13,9 +11,12 @@ function ItemListContainer() {
 
   
   useEffect(() => {
-    customFetch(productos, +idCategoria)
-      .then(data => setListProductos(data)
-      )
+
+    const itemsCollection = idCategoria ? query(collection(db,"productos"), where("categoria", "=", +idCategoria)): collection(db,"productos") ;
+    getDocs(itemsCollection).then((snapshot)=>{
+      setListProductos (snapshot.docs.map((doc)=>({id: doc.id,...doc.data() })));
+    });
+
   }, [idCategoria])
 
 

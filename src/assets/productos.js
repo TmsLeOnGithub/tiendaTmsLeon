@@ -42,16 +42,16 @@ export const productos = [
     {
         "id": 4,
         "nombre": "Teleob. 500/1000mm ",
-        descripcion: `para cámaras sin espejo con montura E de Sony de formato de fotograma completo`,
+        descripcion: `Para cámaras sin espejo con montura E de Sony de formato de fotograma completo`,
         "precio": 18750, categoria: 1,
         "stock": 5,
         "image": "https://m.media-amazon.com/images/I/61eSjrMfPSL._AC_SL1200_.jpg "
     },
     {
         "id": 5,
-        "nombre": "Lente 18-55mm Nikon",
-        "precio": 15400, categoria: 2,
+        "nombre": "Microfono corbatero",
+        "precio": 4120, categoria: 2,
         "stock": 5,
-        "image": "https://m.media-amazon.com/images/I/61eSjrMfPSL._AC_SL1200_.jpg "
+        "image": "https://http2.mlstatic.com/D_NQ_NP_658712-MLA50145366793_052022-O.webp "
     }
 ]
