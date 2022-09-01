@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import CustomProvider from './context/CartContext';
+import { collection } from 'firebase/firestore';
 
 function App() {
   return (

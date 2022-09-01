@@ -12,7 +12,9 @@ function ItemListContainer() {
   
   useEffect(() => {
 
-    const itemsCollection = idCategoria ? query(collection(db,"productos"), where("categoria", "=", +idCategoria)): collection(db,"productos") ;
+    const productos = collection(db,"productos");
+
+    const itemsCollection = idCategoria ? query(productos, where("categoria", "==", +idCategoria)): productos ;
     getDocs(itemsCollection).then((snapshot)=>{
       setListProductos (snapshot.docs.map((doc)=>({id: doc.id,...doc.data() })));
     });

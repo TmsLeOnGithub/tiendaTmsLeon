@@ -13,22 +13,20 @@ const Cart = () => {
     if (cart.length > 0) {
         return (<div>
             {cart.map(producto =>
-                <Card>
+                <Card key={producto.id}>
                     <Card.Header as="h5">{producto.nombre} ${producto.precio}</Card.Header>
                     <Card.Body>
                         <Card.Text>
-
                             Cantidad {producto.cantidad}
-
                         </Card.Text>
                         <Button variant="danger" onClick={() => eliminarProducto(producto.id)}>Eliminar Producto </Button>
-                        <Button variant="primary" size="lg">Terminar compra</Button>
+                     
                     </Card.Body>
                 </Card>
                 
             )}
             <h1>El precio total es $ {calcularTotal()}</h1>
-            
+            <Button variant="primary" size="lg">Terminar compra</Button>
         </div>)
     }
 
